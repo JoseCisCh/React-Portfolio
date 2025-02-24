@@ -1,0 +1,41 @@
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    /* align-content: center; */
+    text-align: start;
+    row-gap: 15px;
+}
+
+.contactForm button {
+    background-color: #6bc9a7;
+}
+
+.contactSection {
+    padding: 20px 100px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.errorBlock {
+    color: rgb(245, 96, 96)
+}
+
+
+.inputBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputBlock input {
+    height: 30px;
+}
+
+.inputBlock select {
+    height: 36px;
+}
+
+.inputBlock textarea {
+    height: 200px;
+}
