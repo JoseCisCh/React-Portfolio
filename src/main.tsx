@@ -2,13 +2,13 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
-import { faSwift,faLinkedin, faGithub  } from "@fortawesome/free-brands-svg-icons";
+import { faSwift,faLinkedin, faGithub, faReact, faJava  } from "@fortawesome/free-brands-svg-icons";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { background, ChakraProvider, extendTheme } from '@chakra-ui/react';
 import { AlertProvider } from './context/alertContext.tsx';
 import Alert from './components/Alert.tsx';
 
-library.add(faSwift, faLinkedin, faGithub );
+library.add(faSwift, faLinkedin, faGithub, faReact, faJava);
 
 const theme = extendTheme({
   styles: {

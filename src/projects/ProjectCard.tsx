@@ -6,7 +6,7 @@ import { faSwift } from "@fortawesome/free-brands-svg-icons";
 
 type PojectWithDefaults = Project & React.ComponentProps<'div'>;
 
-const ProjectCard: React.FC<PojectWithDefaults> = ({title, description, projectIcon}) => {
+const ProjectCard: React.FC<Project> = ({title, description, projectIcon, projectIconAlt}) => {
 
     const [expandCard, setExpandCard] = useState(false);
 
@@ -24,6 +24,7 @@ const ProjectCard: React.FC<PojectWithDefaults> = ({title, description, projectI
             <div className="projectHeader">
                 <h3 className="projectTile">{title}</h3>
                 {projectIcon && <FontAwesomeIcon icon={projectIcon as IconProp} size="2x"/>}
+                {!projectIcon && projectIconAlt && <p>{projectIconAlt}</p>}
             </div>
             {expandCard && <p className="projectDesc">{description}</p>}
         </div>
