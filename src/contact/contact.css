@@ -30,12 +30,18 @@
 
 .inputBlock input {
     height: 30px;
+    background-color: #3d3d3d;
+    border: solid 1px light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
 }
 
 .inputBlock select {
     height: 36px;
+    background-color: #3d3d3d;
+    border: solid 1px light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
 }
 
 .inputBlock textarea {
     height: 200px;
+    background-color: #3d3d3d;
+    border: solid 1px light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
 }

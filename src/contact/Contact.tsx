@@ -1,6 +1,9 @@
 import * as yup from 'yup';
 import { Formik, Form, Field, FormikValues } from 'formik';
 import './contact.css'
+import useSubmit from '../hooks/useSubmit';
+import { useAlertContext } from '../context/alertContext';
+import { useEffect } from 'react';
 
 let contactMeSchema = yup.object().shape({
     firstName: yup.string().required('Name required.'),
@@ -11,9 +14,14 @@ let contactMeSchema = yup.object().shape({
 
 const Contact = () => {
 
-    const handleSubmit = (values: FormikValues) =>{
-        console.log(values);
-    }
+    const { isLoading, response, submit } = useSubmit();
+    const { onOpen } = useAlertContext();
+
+    useEffect(() => {
+        if(response) {
+            onOpen(response.type, response.message);
+        }
+    }, [response]);
 
     return (
         <Formik
@@ -24,7 +32,7 @@ const Contact = () => {
                 comment: ''
             }}
             validationSchema={contactMeSchema}
-            onSubmit={handleSubmit}
+            onSubmit={(values) => { submit('', values)}}
         >
             { (formik) => (<div id='contact' className="contactSection">
                 <h2>Contact me!</h2>
@@ -69,7 +77,7 @@ const Contact = () => {
                         ) : null}
                     </div>
 
-                    <button type='submit'>Submit</button>
+                    <button type='submit'>{!isLoading ? 'Submit' : 'Loading...'}</button>
                 </form>
                 </div>
             )}
