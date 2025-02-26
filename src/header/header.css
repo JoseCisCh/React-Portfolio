@@ -53,9 +53,10 @@
 
 }
 
-@media (max-height: 500px) {
+@media (max-width: 500px) {
     .header {
-        width: 85%
+        width: 85%;
+        overflow: auto;
     }
 }
 

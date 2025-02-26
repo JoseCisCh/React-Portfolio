@@ -9,6 +9,8 @@ type Project = {
     imageUrl?: string;
     projectIcon?: string;
     projectIconAlt?: string;
+    githubLink?: string;
+    demoLink?: string;
 }
 
 const ProjectList = () => {
@@ -25,10 +27,13 @@ const ProjectList = () => {
     }, []);
 
     return (
-        <div className="projectList">
-            {projects.map(project => {
-                return (<ProjectCard key={project.id} {...project}/>)
-            })}
+        <div id="portfolio" className='projects'>
+            <h2>Checkout my portfolio projects!</h2>
+            <div className="projectList">
+                {projects.map(project => {
+                    return (<ProjectCard key={project.id} {...project}/>)
+                })}
+            </div>
         </div>
         
     )
