@@ -30,8 +30,8 @@ const ProjectList = () => {
         <div id="portfolio" className='projects'>
             <h2>Checkout my portfolio projects!</h2>
             <div className="projectList">
-                {projects.map(project => {
-                    return (<ProjectCard key={project.id} {...project}/>)
+                {projects.map((project, index) => {
+                return (<ProjectCard key={project.id} {...project} index={index}/>)
                 })}
             </div>
         </div>

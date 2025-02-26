@@ -1,14 +1,16 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Project } from "./ProjectList"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faSwift } from "@fortawesome/free-brands-svg-icons";
 
 type PojectWithDefaults = Project & React.ComponentProps<'div'>;
+type ProjectWithIndex = Project&{index: number};
 
-const ProjectCard: React.FC<Project> = ({title, description, projectIcon, projectIconAlt, githubLink, demoLink}) => {
+const ProjectCard: React.FC<ProjectWithIndex> = ({title, description, projectIcon, projectIconAlt, githubLink, demoLink, index}) => {
 
     const [expandCard, setExpandCard] = useState(false);
+    const projectCard = useRef<any>(null);
 
     const handleMouseHover = (e : any) => {
         if(e.type == 'mouseover') {
@@ -18,8 +20,17 @@ const ProjectCard: React.FC<Project> = ({title, description, projectIcon, projec
         }
     }
 
+    useEffect(() => {
+        setTimeout(() => {
+            console.log(projectCard);
+            if(projectCard.current){
+                projectCard.current.style.display = 'flex';
+            }
+        }, index * 400);
+    }, []);
+
     return (
-        <div className="projectCard shortenCard" onMouseOver={handleMouseHover} onMouseLeave={handleMouseHover}>
+        <div ref={projectCard} className="projectCard shortenCard" onMouseOver={handleMouseHover} onMouseLeave={handleMouseHover}>
             <div className="projectHeader">
                 <h3 className="projectTile">{title}</h3>
                 {projectIcon && <FontAwesomeIcon icon={projectIcon as IconProp} size="2x"/>}

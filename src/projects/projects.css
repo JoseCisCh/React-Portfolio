@@ -17,7 +17,7 @@
     box-shadow: 4px 4px 6px  #6bc9a7, -1px -1px 6px #6bc4c9;
     /* border: solid 0.1px #6bc9a7; */
     color: #213547;
-    display: flex;
+    display: none;
     flex-direction: column;
     height: 60px;
     justify-content: center;
@@ -26,6 +26,8 @@
     row-gap: 0px;
     text-align: start;
     transition: all 500ms cubic-bezier(0.54, 0.28, 0.42, 1.4);
+    /* animation: border-shadow-anim 3s linear infinite alternate; */
+    animation: appear-project-card  700ms ease-out 1;
 }
 
 .projectHeader {
@@ -100,5 +102,38 @@
         padding: 50px;
     }
 
+}
+
+@keyframes border-shadow-anim {
+    from {
+        box-shadow: 4px 4px 6px  #6bc9a7, -1px -1px 6px #6bc4c9;
+    }
+    to {
+        box-shadow: 9px 9px 10px  #c9746b, -4px -4px 10px #c9b36b;
+    }
+}
+
+@keyframes border-shadow-anim-expensive {
+    from {
+        box-shadow: 4px 4px 6px  #6bc9a7, -1px -1px 6px #6bc4c9;
+    }
+    25% {
+        box-shadow: 5px 5px 5px  #c76bc9, -1px -2px 6px #dc0404;  
+    }
+    50% {
+        box-shadow: 6px 6px 8px  #76c96b, -2px -2px 8px #1204dc;  
+    }
+    to {
+        box-shadow: 9px 9px 10px  #c9746b, -4px -4px 10px #c9b36b;
+    }
+}
+
+@keyframes appear-project-card {
+    from {
+        transform: scale(0.2);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 
