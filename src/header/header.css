@@ -38,6 +38,7 @@
 .link {
     transition: all 400ms linear;
     padding: 0px;
+    color: #6bc9a7;
 }
 
 .link > p {

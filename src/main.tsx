@@ -7,6 +7,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { background, ChakraProvider, extendTheme } from '@chakra-ui/react';
 import { AlertProvider } from './context/alertContext.tsx';
 import Alert from './components/Alert.tsx';
+import { BrowserRouter, Route, Routes } from 'react-router';
+import Header from './header/Header.tsx';
+import Resume from './resume/Resume.tsx';
 
 library.add(faSwift, faLinkedin, faGithub, faReact, faJava);
 
@@ -33,7 +36,12 @@ createRoot(document.getElementById('root')!).render(
     resetCSS={false}>
     <AlertProvider>
       <StrictMode>
-        <App />
+        <BrowserRouter>
+          <Routes>
+              <Route index path='home' element={<App />}/>
+              <Route index path='resume' element={<Resume />}/>
+          </Routes>
+        </BrowserRouter>
         <Alert />
       </StrictMode>
     </AlertProvider>

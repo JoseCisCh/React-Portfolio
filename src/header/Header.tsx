@@ -3,6 +3,7 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./header.css";
 import { useEffect, useRef, useState } from "react";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { Link, NavLink, Outlet } from "react-router";
 
 const Header = ()  => {
     //const [scrollPosition, setScrollPosition] = useState(0);
@@ -36,15 +37,10 @@ const Header = ()  => {
     <div className={showHeader ? "header" : 'header headerHidden'} ref={header}>
         <div className="left">
             <p className="headerTitle">JoCis - Portfolio</p>
-            <a className="link" href="#bio">
-                    <p>Bio</p>
-            </a>
-            <a className="link" href="#portfolio">
-                    <p>Portfolio</p>
-            </a>
-            <a className="link" href="#contact">
-                    <p>Contact</p>
-            </a>
+            <NavLink className="link" to="/home#bio">Bio</NavLink>
+            <NavLink className="link" to="/home#portfolio">Portfolio</NavLink>
+            <Link className="link" to="/home#contact">Contact</Link>
+            <NavLink className="link" to="/resume">Resume</NavLink>
         </div>
         <div className="right">
             <a className="link" href="https://www.linkedin.com/in/jose-andres-cisneros-591360228/">
@@ -56,7 +52,6 @@ const Header = ()  => {
                 <p>Github</p>
             </a>
         </div>
-       
     </div>)
 }
 
