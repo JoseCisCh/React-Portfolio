@@ -1,8 +1,8 @@
 import * as yup from 'yup';
 import { Formik, Form, Field, FormikValues } from 'formik';
 import './contact.css'
-import useSubmit from '../hooks/useSubmit';
-import { useAlertContext } from '../context/alertContext';
+import useSubmit from '../../hooks/useSubmit';
+import { useAlertContext } from '../../context/alertContext';
 import { useEffect } from 'react';
 
 let contactMeSchema = yup.object().shape({

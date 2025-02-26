@@ -2,7 +2,6 @@ import { useState } from "react";
 import type { Project } from "./ProjectList"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { faSwift } from "@fortawesome/free-brands-svg-icons";
 
 type PojectWithDefaults = Project & React.ComponentProps<'div'>;
 
@@ -29,8 +28,8 @@ const ProjectCard: React.FC<Project> = ({title, description, projectIcon, projec
                 <div className="projectDesc">
                     <p>{description}</p>
                     {(githubLink || demoLink) && <div>
-                        {githubLink && (<><a href={githubLink}>Github repo</a></>)}
-                        {demoLink && (<><br/><a href={demoLink}>Demo</a></>)}
+                        {githubLink && (<><a href={githubLink}>Github repo &nbsp;{'>'}</a></>)}
+                        {demoLink && (<><br/><a href={demoLink}>Demo &nbsp;{'>'}</a></>)}
                     </div>}
                     
                     
