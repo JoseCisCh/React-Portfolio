@@ -38,8 +38,8 @@ createRoot(document.getElementById('root')!).render(
       <StrictMode>
         <BrowserRouter>
           <Routes>
-              <Route index path='home' element={<App />}/>
-              <Route index path='resume' element={<Resume />}/>
+              <Route index element={<App />}/>
+              <Route path='/resume' element={<Resume />}/>
           </Routes>
         </BrowserRouter>
         <Alert />

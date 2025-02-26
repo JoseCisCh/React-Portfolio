@@ -35,7 +35,7 @@ function App() {
             icon={faUserAstronaut} 
             ></FontAwesomeIcon>)}
 
-          <h2>José Andrés Cisneros Chauviere</h2>
+          <h2>José Cisneros</h2>
           <p>Computer systems engineer with experience in software development with various technologies, including web
 development tools like HTML, CSS, ReactJS, AngularJS and mobile application development
 (iOS with swift). Motivated to keep growing and learning better software development standards. Looking forward to

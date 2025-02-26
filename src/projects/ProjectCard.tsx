@@ -12,7 +12,6 @@ const ProjectCard: React.FC<Project> = ({title, description, projectIcon, projec
 
     const handleMouseHover = (e : any) => {
         if(e.type == 'mouseover') {
-            
             setExpandCard(true);
         } else if(e.type === 'mouseleave') {
             setExpandCard(false);

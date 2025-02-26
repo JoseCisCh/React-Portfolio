@@ -5,8 +5,8 @@ const Resume = () => {
     return <>
         <Header />
         <div className="resumeScreen">
-            <h2>Take a look at my resume</h2>
             <embed className="embeddedPdf"
+                // src="src/assets/20250224_en.pdf"
                 src="src/assets/20250224_en.pdf"
                 type="application/pdf"
                 width="100%"

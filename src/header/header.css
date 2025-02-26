@@ -1,17 +1,17 @@
 .header {
+    align-items: center;
+    background-color: #242424;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.307);
     display: flex;
     height: 30px;
-    align-items: center;
     justify-content: flex-start;
     /* column-gap: 20px; */
-    border-bottom: solid 1px rgba(255, 255, 255, 0.307);
-    background-color: #242424;
     padding: 20px;
-    transition: transform 0.3s;
     position: fixed;
+    transition: transform 0.3s;
     width: 90%;
     z-index: 10;
-    margin-bottom: 71px;
+    /* margin-bottom: 71px; */
 }
 
 .headerHidden {
@@ -46,11 +46,24 @@
 }
 
 .link:hover {
-    transform: translateY(-10px) scale(1.1);
+    /* transform: translateY(-10px) scale(1.1); */
+    animation: bounce 300ms linear infinite alternate;
+    text-shadow: 0px 1px 10px #6bc4c9;
+    
+
 }
 
 @media (max-height: 500px) {
     .header {
         width: 85%
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-5px) ;
     }
 }
