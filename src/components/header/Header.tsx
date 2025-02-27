@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./header.css";
 import { MouseEventHandler, useEffect, useRef, useState } from "react";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";

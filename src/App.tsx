@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import { faUserAstronaut } from '@fortawesome/free-solid-svg-icons'
-import Header from './header/Header.tsx'
+import Header from './components/header/Header.tsx'
 import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import ProjectList from './projects/ProjectList.tsx'
-import Contact from './contact/Contact.tsx'
+import ProjectList from './components/projects/ProjectList.tsx'
+import Contact from './components/contact/Contact.tsx'
 import { useLocation } from 'react-router'
 import Bio from './biography/Bio.tsx'
 

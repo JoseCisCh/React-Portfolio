@@ -8,8 +8,8 @@ import { background, ChakraProvider, extendTheme } from '@chakra-ui/react';
 import { AlertProvider } from './context/alertContext.tsx';
 import Alert from './components/Alert.tsx';
 import { BrowserRouter, Route, Routes } from 'react-router';
-import Header from './header/Header.tsx';
-import Resume from './resume/Resume.tsx';
+import Header from './components/header/Header.tsx';
+import Resume from './components/resume/Resume.tsx';
 
 library.add(faSwift, faLinkedin, faGithub, faReact, faJava);
 
