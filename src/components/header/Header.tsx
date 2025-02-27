@@ -51,7 +51,7 @@ const Header = ()  => {
             <h3 className="headerTitle">JoCis - Portfolio</h3>
             <NavLink className="link" to="/#bio" onMouseOver={handleLinkHover}>Bio</NavLink>
             <NavLink className="link" to="/#portfolio">Portfolio</NavLink>
-            <Link className="link" to="/#contact">Contact</Link>
+            <Link className="link" to="/#skills">Skills</Link>
             <NavLink className="link" to="/resume">Resume</NavLink>
         </div>
         <div className="right">

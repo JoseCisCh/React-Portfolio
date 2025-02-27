@@ -7,6 +7,7 @@ import ProjectList from './components/projects/ProjectList.tsx'
 import Contact from './components/contact/Contact.tsx'
 import { useLocation } from 'react-router'
 import Bio from './biography/Bio.tsx'
+import SkillList from './components/skills/SkillList.tsx'
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
       <div className='content'>
         <Bio />
         <ProjectList />
-        <Contact />
+        <SkillList />
       </div>
       
     </>
