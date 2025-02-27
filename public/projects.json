@@ -26,8 +26,7 @@
         "title": "Contact Manager",
         "description": "Spring boot application with Java server faces that provides a user interfaces with CRUD operations. Allows to create, delete, update and read contacts from PostgreSQL database using Hibernate as ORM. Also stores users uploaded images in Cloudify service",
         "projectIcon": "fa-brands fa-java",
-        "githubLink": "https://github.com/JoseCisCh/contact-crud",
-        "demoLink": "http://44.220.137.153:8080/views/contact-list.xhtml"
+        "githubLink": "https://github.com/JoseCisCh/contact-crud"
     }
 
 ]
