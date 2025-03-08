@@ -12,7 +12,7 @@ const useSubmit = () => {
   const [isLoading, setLoading] = useState(false);
   const [response, setResponse] = useState<FormResponse | null >(null);
 
-  const submit = async (url: string, data: ContactForm) => {
+  const submit = async (/*url: string,*/ data: ContactForm) => {
     const random = Math.random();
     setLoading(true);
     try {
