@@ -35,7 +35,7 @@ createRoot(document.getElementById('root')!).render(
     resetCSS={false}>
     <AlertProvider>
       <StrictMode>
-        <BrowserRouter>
+        <BrowserRouter basename="/React-Portfolio/">
           <Routes>
               <Route index element={<App />}/>
               <Route path='/resume' element={<Resume />}/>
