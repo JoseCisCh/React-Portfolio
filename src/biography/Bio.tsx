@@ -1,10 +1,9 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserAstronaut } from '@fortawesome/free-solid-svg-icons/faUserAstronaut';
+
 import './Bio.css';
 
 const Bio = () => {
 
-    let imageUrl : string | null = null;
+    //let imageUrl : string | null = null;
 
     return (
         <div id="bio" className="biographySection">

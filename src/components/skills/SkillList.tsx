@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { Skill } from "../../types/Skill"
 import './skills.css'
 
-const SkillListItem: React.FC<Skill&{level:number}> = ({id, name, subskills, level}) => {
+const SkillListItem: React.FC<Skill&{level:number}> = ({ name, subskills, level}) => {
 
     const colors = [
         '#6bc9a7',

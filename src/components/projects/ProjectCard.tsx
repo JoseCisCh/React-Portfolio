@@ -3,7 +3,6 @@ import type { Project } from "./ProjectList"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-type PojectWithDefaults = Project & React.ComponentProps<'div'>;
 type ProjectWithIndex = Project&{index: number};
 
 const ProjectCard: React.FC<ProjectWithIndex> = ({title, description, projectIcon, projectIconAlt, githubLink, demoLink, index}) => {

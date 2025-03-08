@@ -1,5 +1,5 @@
 import * as yup from 'yup';
-import { Formik, Form, Field, FormikValues } from 'formik';
+import { Formik } from 'formik';
 import './contact.css'
 import useSubmit from '../../hooks/useSubmit';
 import { useAlertContext } from '../../context/alertContext';
@@ -32,7 +32,7 @@ const Contact = () => {
                 comment: ''
             }}
             validationSchema={contactMeSchema}
-            onSubmit={(values) => { submit('', values)}}
+            onSubmit={(values) => { submit(values)}}
         >
             { (formik) => (<div id='contact' className="contactSection">
                 <h2>Contact me!</h2>
