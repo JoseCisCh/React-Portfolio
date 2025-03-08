@@ -1,0 +1,22 @@
+.skillsSection {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 200px;
+    align-items: center;
+}
+
+.skillsList {
+    margin: 50px 0px;
+    text-align: start;
+    align-self: start;
+}
+
+.parentSkill {
+    color: #327a87;
+}
+
+@media(min-width: 1300px) {
+    .skillsSection {
+        padding: 20px 400px;
+    }
+}
